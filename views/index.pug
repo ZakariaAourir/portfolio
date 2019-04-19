@@ -1,0 +1,217 @@
+doctype html
+html
+  head
+    title Portfolio
+    link(rel="stylesheet", type="text/html", href="/bower_components/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/bower_components/ionicons/css/ionicons.css")
+    link(rel="stylesheet", href="https://bootswatch.com/4/lux/bootstrap.min.css")
+    link(rel="stylesheet", href="/bower_components/font-awesome/css/fontawesome.min.css")
+  body#page-top
+    include ./layout/include.pug
+    #home.intro.route.bg-image(style='background-image: url(/img/zack.jpg)')
+      .intro-content.display-table
+        .table-cell
+          .container
+            h1.intro-title.mb-4 I am Zakaria Aourir
+            h3.intro-titles.mb-4 Web developer
+            p Let's scrole and learn more about what i am capable of
+            a.btn(href='#about')
+              i.icon-button
+    section#about.about-mod
+      .container
+        .row
+          .col-md-6.fix-marg
+            .row
+              .col-sm-6.col-md-5.about-intro
+                .title-s
+                  img.myimg(src='/img/DSC_7839.JPG')
+              .col-sm-6.col-md-7
+                .about-info
+                  p
+                    span.title-s Name:
+                    span.title-f  Zakaria Aourir
+                  br
+                  p
+                    span.title-s Profile:
+                    span.title-f  Full Stack Developer
+                  br
+                  p
+                    span.title-s Email:
+                    span.title-f  zakaria1997aourir@gmail.com
+                  br
+                  p
+                    span.title-s Phone:
+                    span.title-f  0694219556
+          .col-md-6.fix-marg
+            .about-dp
+              h2.about-d About
+              p.about-p
+                | I am currently studying at<a class='underline' href="https://www.inpt.ac.ma/"> National Institute of Posts and Telecommunications</a>.
+                | I study<a class='underline' href="https://www.inpt.ac.ma/fr/ing%C3%A9nierie-informatique"> computer engineering </a>and i want to work on some freelance projects.
+      .container
+        .row
+          .col-md-12
+            h2.about-d2 Services
+        .row.service-margin
+          .col-md-4
+            .service-box
+              .service-ico
+                span.ico-circle
+                  i.fontawesome2
+              h5.about-d Student
+              p.service-p
+                | As a student i learned some basics about front and back end
+                | but what got me really started is working on some solo projects
+                | as well as school projects.
+          .col-md-4
+            .service-box
+              .service-ico
+                span.ico-circle
+                  i.fontawesome
+              h5.about-d Web developer
+              p.service-p
+                | I have experience in both front and back end. I've worked on some projects
+                | using nodejs and most recently i started working with react and vue.
+          .col-md-4
+            .service-box
+              .service-ico
+                span.ico-circle
+                  i.fontawesome3
+              h5.about-d Starter
+              p.service-p
+                | I've always been interested in startups from early stages to launching an MVP,
+                | i have the spirit of team working that will allow me to integrate a startup.
+    section#projects.about-mod
+      .container
+        .row
+          .col-md-12
+            h2.about-d2 Projects
+            p.about-d2-1 some of the projects that i've realised
+        .row.service-margin
+          .col-md-4
+            .service-box2
+              .service-ico2
+                img.img-fluid(src='/img/internship-online.png')
+              .service-content2
+                h4 Internship Online
+                p
+                  | Web development
+                  | / created #{moment("20190320", "YYYYMMDD").fromNow()}
+              .w-like#myBtn
+                span.ion-ios-plus-outline
+              .modal#myModal
+                .modal-content
+                  span.close &times;
+                  p some text
+          .col-md-4
+            .service-box2
+              .service-ico2
+                img.img-fluid(src='/img/sportsblog.png')
+              .service-content2
+                h4 SportsBlog
+                p
+                  | Web development
+                  | / created #{moment("20190101", "YYYYMMDD").fromNow()}
+              .w-like
+                span.ion-ios-plus-outline
+          .col-md-4
+            .service-box2
+              .service-ico2
+                img.img-fluid.img-proj(src='/img/ihavesomethingtodo.png')
+              .service-content2
+                h4 I Have Something To Do
+                p
+                  | Web development
+                  | / created #{moment("20181101", "YYYYMMDD").fromNow()}
+              .w-like
+                dspan.ion-ios-plus-outline
+    section#skills.about-mod
+      .container
+        .row
+          .col-md-12
+            h2.about-d2 Skills
+            p.about-d2-1 Technologies i work with the most
+        .row.about-d2-2
+          .col-md-2.control-marg
+          .col-md-2
+            a(href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' target="_blank")
+              i.html-ico(title='HTML5')
+          .col-md-2
+            a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3' target="_blank")
+              i.html-ico2(title='CSS3')
+          .col-md-2
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target="_blank")
+              i.html-ico3(title='Javascript')
+          .col-md-2
+            a(href='https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs' target="_blank")
+              i.html-ico4(title='nodejs')
+          .col-md-2
+        .row
+          .col-md-4
+          .col-md-2
+            a(href='https://reactjs.org/' target="_blank")
+              i.html-ico5(title='Reactjs')
+          .col-md-2
+            a(href='https://git-scm.com/' target="_blank")
+              i.html-ico6(title='Git')
+          .col-md-4
+    section#contact.about-mod
+      .container
+        .row
+          .col-md-12
+            h2.about-d2-d Contact
+            p.about-d2-1 Contact me if you need a service or a friendly advice
+        .row
+          .col-md-6.margin-cont
+            .container
+              h4 Send a message
+              hr.new4
+              form.form-change
+                .form-group
+                  label.font-weight-bold Name:
+                  input.form-control(type='text', name='name', placeholder='Full Name')
+                .form-group
+                  label.font-weight-bold Email:
+                  input.form-control(type='email', name='email', placeholder='Email')
+                .form-group
+                  label.font-weight-bold Message:
+                  textarea.form-control(name='message', placeholder='Message')
+              button.button.button-a.button-big.button-rouded(type='submit', methode='post') Send message
+          .col-md-6.margin-cont
+            h4 Get in touch
+            hr.new4
+            p.service-p
+              | You can send me a message if you want us to work on a project together
+              | or simply give or get an advice. I'm open to all kind of new stuff.
+              | Here are some of my social media profiles where you can add me
+              | and we can get in touch there.
+            ul.list-ico
+              li
+                span.icon-loc
+                p.icon-loc-p INPT, Avenue Allal Al Fassi, Rabat
+              li
+                span.icon-loc2
+                p.icon-loc-p zaourir97@gmail.com
+              li
+                a(href='https://www.linkedin.com/in/zakaria-aourir-851098164/' target="_blank")
+                  span.icon-loc3
+                a(href='https://www.instagram.com/zakariaaourir/' target="_blank")
+                  span.icon-loc4
+                a(href='https://codepen.io/zack07/' target="_blank")
+                  span.icon-loc5
+                a(href='https://github.com/ZakariaAourir' target="_blank")
+                  span.icon-loc6
+    footer
+      section.about-mod2
+        .container
+          .row
+            .col-md-4
+            .col-md-4.margin-foot
+              Copyright &copy; 2019 Zakaria Aourir, All Rights Reserved
+              p Made with passion and code
+            .col-md-4
+
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/js/main.js')
