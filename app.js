@@ -1,26 +1,32 @@
-const express = require('express');
-const path = require('path');
+const express = require('express')
+const path = require('path')
+const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer')
 
 // port
-const port = 3000;
+const port = 3000
 
 // init app
-const app = express();
+const app = express()
 
 //routes
-const index = require('./route/index');
+const index = require('./route/index')
 // view engine
-app.set('views',path.join(__dirname, 'views'));
-app.set('view engine','pug');
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'pug')
+
+// bodyParser
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 // moment
-app.locals.moment = require('moment');
+app.locals.moment = require('moment')
 // static folder
-app.set(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.set(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', index);
+app.use('/', index)
 //running the port
-app.listen(port , () => {
-  console.log('server is running on port... ' + port);
-});
+app.listen(port, () => {
+	console.log('server is running on port... ' + port)
+})

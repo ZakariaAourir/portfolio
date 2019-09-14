@@ -25,7 +25,7 @@ html
             .row
               .col-sm-6.col-md-5.about-intro
                 .title-s
-                  img.myimg(src='/img/DSC_7839.JPG')
+                  img.myimg(src='/img/mypic.jpg')
               .col-sm-6.col-md-7
                 .about-info
                   p
@@ -49,10 +49,13 @@ html
               p.about-p
                 | I am currently studying at<a class='underline' href="https://www.inpt.ac.ma/"> National Institute of Posts and Telecommunications</a>.
                 | I study<a class='underline' href="https://www.inpt.ac.ma/fr/ing%C3%A9nierie-informatique"> computer engineering </a>and i want to work on some freelance projects.
+              canvas#my_canvas
+              .resume
+                button#resume.button.button-a.button-big.button-rouded() Resume
       .container
         .row
           .col-md-12
-            h2.about-d2 Services
+            h2.about-serv Services
         .row.service-margin
           .col-md-4
             .service-box
@@ -98,12 +101,9 @@ html
                 p
                   | Web development
                   | / created #{moment("20190320", "YYYYMMDD").fromNow()}
-              .w-like#myBtn
-                span.ion-ios-plus-outline
-              .modal#myModal
-                .modal-content
-                  span.close &times;
-                  p some text
+                p.styletext
+                  | It's a platform that provides diffrent internships offers all over the world.
+                  | Technologies used: nodejs, Express, javascript, jquery, pug, css..
           .col-md-4
             .service-box2
               .service-ico2
@@ -113,8 +113,9 @@ html
                 p
                   | Web development
                   | / created #{moment("20190101", "YYYYMMDD").fromNow()}
-              .w-like
-                span.ion-ios-plus-outline
+                p.styletext
+                  | Provides articles about diffrent categories of sports using CRUD functionalities.
+                  | Technologies used: nodejs, Express, javascript, jquery, pug, css..
           .col-md-4
             .service-box2
               .service-ico2
@@ -124,12 +125,13 @@ html
                 p
                   | Web development
                   | / created #{moment("20181101", "YYYYMMDD").fromNow()}
-              .w-like
-                dspan.ion-ios-plus-outline
+                p.styletext
+                  | A platform where you can keep track of your daily life activities in the present and futur.
+                  | Technologies used: nodejs, Express, javascript, ejs..
     section#skills.about-mod
       .container
         .row
-          .col-md-12
+          .col-md-12.skill-marg
             h2.about-d2 Skills
             p.about-d2-1 Technologies i work with the most
         .row.about-d2-2
@@ -150,8 +152,8 @@ html
         .row
           .col-md-4
           .col-md-2
-            a(href='https://reactjs.org/' target="_blank")
-              i.html-ico5(title='Reactjs')
+            a(href='https://vuejs.org/' target="_blank")
+              i.html-ico5(title='Vuejs')
           .col-md-2
             a(href='https://git-scm.com/' target="_blank")
               i.html-ico6(title='Git')
@@ -167,7 +169,7 @@ html
             .container
               h4 Send a message
               hr.new4
-              form.form-change
+              form.form-change(method='POST', action='send')
                 .form-group
                   label.font-weight-bold Name:
                   input.form-control(type='text', name='name', placeholder='Full Name')
@@ -177,7 +179,7 @@ html
                 .form-group
                   label.font-weight-bold Message:
                   textarea.form-control(name='message', placeholder='Message')
-              button.button.button-a.button-big.button-rouded(type='submit', methode='post') Send message
+                button.button.button-a.button-big.button-rouded(type='submit') Send message
           .col-md-6.margin-cont
             h4 Get in touch
             hr.new4
@@ -215,3 +217,4 @@ html
     script(src='/bower_components/jquery/dist/jquery.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
     script(src='/js/main.js')
+    script(src='https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.943/build/pdf.min.js')
