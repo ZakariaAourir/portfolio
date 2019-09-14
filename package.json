@@ -14,6 +14,7 @@
     "express": "*",
     "moment": "^2.24.0",
     "nodemailer": "^6.3.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "pug": "*"
   }
 }

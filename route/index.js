@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const nodemailer = require('nodemailer')
+const sgTransport = require('nodemailer-sendgrid-transport')
 
 router.get('/', (req, res, next) => {
 	res.render('index')
@@ -20,15 +21,15 @@ router.post('/send', (req, res, next) => {
     <p>${req.body.message}</p>
     `
 	// create reusable transporter object using the default SMTP transport
-	let transporter = nodemailer.createTransport({
-		host: 'smtp.sendgrid.net', // true for 465, false for other ports
-		// debug: true,
-		// logger: true,
-		auth: {
-			user: 'apikey', // generated ethereal user
-			pass: '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' // generated ethereal password
-		}
-	})
+	let transporter = nodemailer.createTransport(
+		sgTransport({
+			host: 'smtp.sendgrid.net',
+			auth: {
+				user: process.env.SMTP_USER,
+				pass: process.env.SMTP_API_KEY
+			}
+		})
+	)
 
 	// setup email data with unicode symbols
 	let mailOptions = {
