@@ -1,23 +1,22 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "npm install && node app.js"
-  },
-  "author": "zakariaAourir",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "bower": "*",
-    "bower-components": "^1.0.0",
-    "dotenv": "^8.1.0",
-    "express": "*",
-    "moment": "^2.24.0",
-    "nodemailer": "^6.3.0",
-    "nodemailer-sendgrid-transport": "^0.2.0",
-    "pug": "*"
-  }
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {},
+	"author": "zakariaAourir",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"bower": "*",
+		"bower-components": "^1.0.0",
+		"dotenv": "^8.1.0",
+		"express": "*",
+		"moment": "^2.24.0",
+		"netlify-lambda": "^1.6.3",
+		"nodemailer": "^6.3.0",
+		"nodemailer-sendgrid-transport": "^0.2.0",
+		"pug": "*",
+		"serverless-http": "^2.3.0"
+	}
 }
