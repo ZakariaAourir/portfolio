@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Portfolio
+    title Zakaria Aourir-Dev & Design
     link(rel="stylesheet", type="text/html", href="/bower_components/bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet", href="/css/style.css")
     link(rel="stylesheet", href="/bower_components/ionicons/css/ionicons.css")
@@ -47,15 +47,10 @@ html
             .about-dp
               h2.about-d About
               p.about-p
-                | I am currently studying at<a class='underline' href="https://www.inpt.ac.ma/"> National Institute of Posts and Telecommunications</a>.
-                | I study<a class='underline' href="https://www.inpt.ac.ma/fr/ing%C3%A9nierie-informatique"> computer engineering </a>and i want to work on some freelance projects.
+                | I am currently studying at<a class='underline' href="https://www.inpt.ac.ma/" target="_blank"> National Institute of Posts and Telecommunications</a>.
+                | I study<a class='underline colortext' href="https://www.inpt.ac.ma/fr/ing%C3%A9nierie-informatique" target="_blank"> computer engineering </a>and i want to work on some freelance projects.
               .resume
-                button.trigger_popup_fricc.button.button-a.button-big.button-rouded() Resume
-                .hover_bkgr_fricc
-                    span.helper
-                    div
-                        .popupCloseButton X
-                        canvas#pdf-render
+                a.underline.button.button-a.button-big.button-rouded()(href='https://drive.google.com/file/d/1MllIH1SErAiuHeL9TtJUMSrG3TRJJ2ay/view' target="_blank") Resume
       .container
         .row
           .col-md-12
@@ -221,4 +216,3 @@ html
     script(src='/bower_components/jquery/dist/jquery.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
     script(src='/js/main.js')
-    script(src='https://mozilla.github.io/pdf.js/build/pdf.js')

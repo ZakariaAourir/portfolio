@@ -121,16 +121,16 @@
 // 		})
 // 	})
 // })
-const url = '/zakariaresume.pdf'
-let pdfDoc = null
-
-const scale = 1.5
-const canvas = document.querySelector('#pdf-render')
-const ctx = canvas.getContext('2d')
-
-const renderPage = num => {}
-
-pdfjsLib.getDocument(url).promise.then(doc => {
-	pdfDoc = doc
-	console.log(pdfdoc)
-})
+// const url = '/zakariaresume.pdf'
+// let pdfDoc = null
+//
+// const scale = 1.5
+// const canvas = document.querySelector('#pdf-render')
+// const ctx = canvas.getContext('2d')
+//
+// const renderPage = num => {}
+//
+// pdfjsLib.getDocument(url).promise.then(doc => {
+// 	pdfDoc = doc
+// 	console.log(pdfdoc)
+// })
