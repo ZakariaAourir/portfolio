@@ -10,9 +10,9 @@ const port = 3000
 const app = express()
 
 //routes
-const index = require('../dist/route/index')
+const index = require('./route/index')
 // view engine
-app.set('views', path.join(__dirname, '../dist/views'))
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
 // bodyParser
@@ -22,8 +22,8 @@ app.use(bodyParser.json())
 // moment
 app.locals.moment = require('moment')
 // static folder
-app.set(express.static(path.join(__dirname, '../dist/public')))
-app.use(express.static(path.join(__dirname, '../dist/public')))
+app.set(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', index)
 //running the port
